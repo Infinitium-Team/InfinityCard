@@ -13,3 +13,6 @@
 2. Запустить и прописать `install`
 3. Следовать инструкциям установщика
 4. После установки прописать: ```wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/install/installer.lua && installer.lua```
+
+# Авторы
+KilDoom (Создатель HashiCard)

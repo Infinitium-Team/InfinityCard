@@ -20,14 +20,19 @@ io.write("> ")
 local mode = io.read()
 
 if (mode == "1") then
- os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/libraries/GUI.lua /lib/GUI.lua")
- os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/master/lib/advancedLua.lua /lib/advancedLua.lua")
- os.execute("wget -f https://raw.githubusercontent.com/IgorTimofeev/Color/master/Color.lua /lib/color.lua")
- os.execute("wget -f https://raw.githubusercontent.com/IgorTimofeev/Image/master/Image.lua /lib/image.lua")
- os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_controller.lua && module_controller.lua")
+--  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_controller.lua && module_controller.lua")
+  print("Not Ready")
 elseif (mode == "2") then
 --  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_terminal.lua && module_terminal.lua")
-  print("Not Ready")
+  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/release/InfinityCard.lua /infinitycard.lua")
+  local file = io.open("/home/.shrc", "w")
+
+  if file then
+      file:write("/infinitycard.lua\n")
+      file:close()
+      
+      print("Успешно установленно!")
+      os.execute("reboot")
 else
  os.exit()
 end
