@@ -33,6 +33,7 @@ elseif (mode == "2") then
       
       print("Успешно установленно!")
       os.execute("reboot")
+  end
 else
  os.exit()
 end
