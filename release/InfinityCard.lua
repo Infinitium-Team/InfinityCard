@@ -16,13 +16,14 @@ while true do
     local uptime = computer.uptime()
     local date = os.date("*t", uptime)
     print("© 2022-" .. date.year .. " Infinitum")
-    io.write("Выберите алогритм шифрования (KSH/BSE): ")
+    io.write("Выберите алгоритм шифрования (KSH/BSE): ")
     local warningColor = "\27[33m"
     local alg = string.lower(io.read())
 
     if alg == "ksh" then
         print("\nПонял. Будем использовать KSH")
         io.write("Никнейм того кто будет использовать карту (С учетом регистра): ")
+        local user = io.read()
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
         print("[INFO] Начинаем...")
@@ -32,10 +33,11 @@ while true do
         print("[INFO] Успешно!")
         os.sleep(4)
         os.execute("clear")
-    else if alg == "bse" then
+    elseif alg == "bse" then
         local base64 = require("base64")
         print("\nПонял. Будем использовать BSE")
         io.write("Никнейм того кто будет использовать карту (С учетом регистра): ")
+        local user = io.read()
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
         print("[INFO] Начинаем...")
