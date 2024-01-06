@@ -21,7 +21,7 @@ local mode = io.read()
 
 if (mode == "1") then
  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/libraries/GUI.lua /lib/GUI.lua")
- os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/master/lib/advancedLua.lua /lib/advancedlua.lua")
+ os.execute("wget -f https://raw.githubusercontent.com/sziberov/OpenComputers/master/lib/advancedLua.lua /lib/advancedLua.lua")
  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_controller.lua && module_controller.lua")
 elseif (mode == "2") then
 --  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_terminal.lua && module_terminal.lua")
