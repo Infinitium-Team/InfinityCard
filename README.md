@@ -1,4 +1,4 @@
-# HashiCard
+# InfinityCard
 > Простое ПО для автоматизации контроля пропуска магнитных карт для OpenComputers и считывателя карт из OpenSecurity
 
 # Требования
