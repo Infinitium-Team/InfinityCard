@@ -20,6 +20,7 @@ io.write("> ")
 local mode = io.read()
 
 if (mode == "1") then
+ os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/libraries/GUI.lua")
  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_controller.lua && module_controller.lua")
 elseif (mode == "2") then
 --  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/modules/module_terminal.lua && module_terminal.lua")
