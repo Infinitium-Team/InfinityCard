@@ -33,7 +33,6 @@ while true do
         os.sleep(4)
         os.execute("clear")
     elseif alg == "bse" then
-        local base64 = require("base64")
         print("\nПонял. Будем использовать BSE")
         io.write("Никнейм того кто будет использовать карту (С учетом регистра): ")
         local user = io.read()
