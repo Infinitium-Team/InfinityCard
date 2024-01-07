@@ -40,8 +40,8 @@ while true do
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
         print(infoColor .. "[INFO] Начинаем...")
-        local firstEncodedUser = base64.encode(user)
-        local doublyEncodedUser = base64.encode(firstEncodedUser)
+        local firstEncodedUser = encode64(user)
+        local doublyEncodedUser = encode64(firstEncodedUser)
         os.sleep(0.5)
         local data = doublyEncodedUser
         writer.write(data, user .. "'s InfinityCard", true)
