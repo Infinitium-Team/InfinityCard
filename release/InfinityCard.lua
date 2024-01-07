@@ -16,6 +16,7 @@ while true do
     print("© 2022-2023 Infinitum")
     io.write("Выберите алгоритм шифрования (KSH/BSE): ")
     local warningColor = "\27[33m"
+    local infoColor = "\27[0m"
     local alg = string.lower(io.read())
 
     if alg == "ksh" then
@@ -24,11 +25,11 @@ while true do
         local user = io.read()
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
-        print("[INFO] Начинаем...")
+        print(infoColor .. "[INFO] Начинаем...")
         local salt = math.random(100000, 999999)
         os.sleep(0.5)
         writer.write(user, user .. "'s InfinityCard", true)
-        print("[INFO] Успешно!")
+        print(infoColor .. "[INFO] Успешно!")
         os.sleep(4)
         os.execute("clear")
     elseif alg == "bse" then
@@ -38,13 +39,13 @@ while true do
         local user = io.read()
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
-        print("[INFO] Начинаем...")
+        print(infoColor .. "[INFO] Начинаем...")
         local firstEncodedUser = base64.encode(user)
         local doublyEncodedUser = base64.encode(firstEncodedUser)
         os.sleep(0.5)
         local data = doublyEncodedUser
         writer.write(data, user .. "'s InfinityCard", true)
-        print("[INFO] Успешно!")
+        print(infoColor .. "[INFO] Успешно!")
         os.sleep(4)
         os.execute("clear")
     end
