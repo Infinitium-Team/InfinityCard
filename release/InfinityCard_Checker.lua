@@ -11,7 +11,7 @@ function openDoor()
     doorc.close()
 end
 
-function error()
+function ferror()
     print("Ошибка")
 end
 
@@ -19,7 +19,7 @@ function checkCard(cardUniqueId)
     if cardUniqueId == "card-id" or cardUniqueId == "card-id2 continue..." then
         openDoor()
     else
-        error()
+        ferror()
     end
 end
 
@@ -27,15 +27,15 @@ function unameChecker(eventName, address, playerName, cardData, cardUniqueId, is
     if string.sub(cardData, -2) == "==" then
         local newCardData = data.decode64(data.decode64(cardData))
         if newCardData == playerName then
-            Cards(cardUniqueId)
+            checkCard(cardUniqueId)
         else
-            error()
+            ferror()
         end
     else
         if cardData == playerName then
-            Cards(cardUniqueId)
+            checkCard(cardUniqueId)
         else
-            error()
+            ferror()
         end
     end
 end
