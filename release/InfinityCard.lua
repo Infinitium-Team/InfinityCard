@@ -13,9 +13,7 @@ while true do
     os.execute("clear")
     print(asciiArt .. "\n")
     local computer = require("computer")
-    local uptime = computer.uptime()
-    local date = os.date("*t", uptime)
-    print("© 2022-" .. date.year .. " Infinitum")
+    print("© 2022-2023 Infinitum")
     io.write("Выберите алгоритм шифрования (KSH/BSE): ")
     local warningColor = "\27[33m"
     local alg = string.lower(io.read())
