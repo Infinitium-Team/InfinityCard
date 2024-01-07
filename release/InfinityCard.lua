@@ -33,14 +33,15 @@ while true do
         os.sleep(4)
         os.execute("clear")
     elseif alg == "bse" then
+        local data = require("component").data
         print("\nПонял. Будем использовать BSE")
         io.write("Никнейм того кто будет использовать карту (С учетом регистра): ")
         local user = io.read()
         print(warningColor .. "[WARNING] После выполнения, карту будет невозможно переписать!")
         os.sleep(2)
         print(infoColor .. "[INFO] Начинаем...")
-        local firstEncodedUser = encode64(user)
-        local doublyEncodedUser = encode64(firstEncodedUser)
+        local firstEncodedUser = data.encode64(user)
+        local doublyEncodedUser = data.encode64(firstEncodedUser)
         os.sleep(0.5)
         local data = doublyEncodedUser
         writer.write(data, user .. "'s InfinityCard", true)
