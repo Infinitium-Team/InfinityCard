@@ -20,7 +20,7 @@ io.write("> ")
 local mode = io.read()
 
 if (mode == "1") then
-  print("ВАЖНО! Что-бы пропускало ваши карты вам понадобится отредактировать файл InfinityCard_Checker.lua на 19 линии, \nчто-бы получить айди карты вам нужно будет установить InfinityCard_ID.lua коммандой:\nwget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/release/InfinityCard_ID && InfinityCard_ID.lua\nА после установки и запуска нужно будет кликнуть картой по читателю карт.")
+  print("ВАЖНО! Что-бы пропускало ваши карты вам понадобится отредактировать файл InfinityCard_Checker.lua на 19 линии, \nчто-бы получить айди карты вам нужно будет установить InfinityCard_ID.lua коммандой:\nwget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/release/InfinityCard_ID.lua && InfinityCard_ID.lua\nА после установки и запуска нужно будет кликнуть картой по читателю карт.")
   os.sleep(0.5)
   print("Установка начнется через две секунды...")
   os.sleep(2)
