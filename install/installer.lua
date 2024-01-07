@@ -24,7 +24,7 @@ if (mode == "1") then
   os.sleep(0.5)
   print("Установка начнется через две секунды...")
   os.sleep(2)
-  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/release/InfinityCard_Checker")
+  os.execute("wget -f https://raw.githubusercontent.com/Infinitium-Team/InfinityCard/main/release/InfinityCard_Checker.lua")
   print("Успешно установленно!")
   os.execute("InfinityCard_Checker.lua")
 elseif (mode == "2") then
